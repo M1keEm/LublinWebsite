@@ -83,7 +83,7 @@ function fadeIn(el, display) {
 // import {Loader} from '@googlemaps/js-api-loader';
 //
 // const apiOptions = {
-//     apiKey: "AIzaSyADKHUBGqgYdn8FQ_T9Ku79tQgmACXMbrM"
+//     apiKey: "YOURAPIKEY"
 // }
 //
 // const loader = new Loader(apiOptions);
