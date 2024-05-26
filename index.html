@@ -185,7 +185,7 @@
 <!--</div>-->
 
 <!-- Bootstrap 5 Contact Form Snippet -->
-<section id="opinions">
+<section class="content-section bg-primary" id="opinions">
     <div class="container px-5 my-5">
         <div class="row justify-content-center">
             <div class="col-lg-8">
@@ -196,69 +196,74 @@
                             <p class="mb-4 text-muted">Spodobała ci się nasza strona? A może masz jakieś uwagi i
                                 chciałbyś się nimi podzielić? Zostaw nam opinię!</p>
                         </div>
-
-                        <!-- * * * * * * * * * * * * * *
-                        // * * SB Forms Contact Form * *
-                        // * * * * * * * * * * * * * * *
-
-                        // This form is pre-integrated with SB Forms.
-                        // To make this form functional, sign up at
-                        // https://startbootstrap.com/solution/contact-forms
-                        // to get an API token!
-                        -->
-
-                        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-
-                            <!-- Name Input -->
+                        <form id="contactForm">
                             <div class="form-floating mb-3">
                                 <input class="form-control" id="name" type="text" placeholder="Name"
-                                       data-sb-validations="required"/>
-                                <label for="name">Name</label>
-                                <div class="invalid-feedback" data-sb-feedback="name:required">Nazwa jest wymagana.</div>
+                                       pattern="^[a-zA-ZąćęłńóśżźĄĆĘŁŃÓŚŻŹ]{2,20}$" maxlength="20"
+                                       required/>
+                                <label for="name">Nazwa</label>
+                                <div class="invalid-feedback">Nazwa jest wymagana.</div>
                             </div>
 
-                            <!-- Email Input -->
                             <div class="form-floating mb-3">
-                                <input class="form-control" id="emailAddress" type="email" placeholder="Email Address"
-                                       data-sb-validations="required,email"/>
-                                <label for="emailAddress">Email Address</label>
-                                <div class="invalid-feedback" data-sb-feedback="emailAddress:required">Adres email jest wymaganany.
+                                <input class="form-control" id="emailAddress" type="email" placeholder="Email"
+                                       maxlength="30" size="30"
+                                       pattern="^[a-zA-Z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                                <label for="emailAddress">Adres email</label>
+                                <div class="invalid-feedback">Adres email jest wymagany.
                                 </div>
-                                <div class="invalid-feedback" data-sb-feedback="emailAddress:email">Email Niepoprawny adres email.
+                                <div class="invalid-feedback">Adres email jest niepoprawny.
                                 </div>
                             </div>
-
-                            <!-- Message Input -->
+<!--                            <div class="form-floating mb-3">-->
+<!--                                <input class="form-control" id="artist" type="text" placeholder="Artist"-->
+<!--                                       maxlength="20" required/>-->
+<!--                                <label for="artist">Artist's Name</label>-->
+<!--                                <div class="invalid-feedback">Artist's name is-->
+<!--                                    required.-->
+<!--                                </div>-->
+<!--                            </div>-->
                             <div class="form-floating mb-3">
-                                <textarea class="form-control" id="message" type="text" placeholder="Message"
-                                          style="height: 10rem;" data-sb-validations="required"></textarea>
-                                <label for="message">Message</label>
-                                <div class="invalid-feedback" data-sb-feedback="message:required">Wiadomość jest wymagana.
+                                <textarea class="form-control" id="message" type="text"
+                                          placeholder="Napisz swoją opinię" style="height: 10rem;"
+                                          required></textarea>
+                                <label for="message">Napisz swoją opinię...</label>
+                                <div class="invalid-feedback">Nie napisałeś nam opnii.. :c
                                 </div>
                             </div>
-
-                            <!-- Submit success message -->
+<!--                            <p class="mb-1 text-muted" style="text-align: center">Where your suggestion is-->
+<!--                                available?</p>-->
+<!--                            <div class="checkbox-container"-->
+<!--                                 style="display: flex;justify-content: center; gap: 5px; margin-bottom: 0.5rem">-->
+<!--                                <input type="checkbox" name="spotify" id="spotify" checked>-->
+<!--                                <label for="spotify">Spotify</label>-->
+<!--                                <input type="checkbox" name="Youtube" id="Youtube">-->
+<!--                                <label for="Youtube">Youtube</label>-->
+<!--                                <input type="checkbox" name="AppleMusic" id="AppleMusic">-->
+<!--                                <label for="AppleMusic">Apple Music</label>-->
+<!--                                <input type="checkbox" name="Tidal" id="Tidal">-->
+<!--                                <label for="Tidal">Tidal</label>-->
+<!--                            </div>-->
                             <div class="d-none" id="submitSuccessMessage">
                                 <div class="text-center mb-3">
                                     <div class="fw-bolder">Form submission successful!</div>
-                                    <p>To activate this form, sign up at</p>
-                                    <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
                                 </div>
                             </div>
-
-                            <!-- Submit error message -->
                             <div class="d-none" id="submitErrorMessage">
                                 <div class="text-center text-danger mb-3">Error sending message!</div>
                             </div>
 
-                            <!-- Submit button -->
                             <div class="d-grid">
-                                <button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Submit
+                                <button class="btn btn-primary btn-lg" id="submitButton" type="submit">Submit
                                 </button>
+                                <!--<a class="btn btn-dark btn-lg" href="edit.html">Edit</a> -->
                             </div>
                         </form>
-                        <!-- End of contact form -->
-
+                        <div id="form-error"></div>
+                        <section id="data-section">
+                            <h2 class="fw-light" style="margin-top: 1em">Opinie:</h2>
+                            <ul id="data-list"></ul>
+                        </section>
                     </div>
                 </div>
             </div>
@@ -287,6 +292,7 @@
     </div>
 </footer>
 <!-- Scroll to Top Button-->
+<script src="js/local.js"></script>
 <a class="scroll-to-top rounded" href="#page-top"><i class="fas fa-angle-up"></i></a>
 <!-- Bootstrap core JS-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
