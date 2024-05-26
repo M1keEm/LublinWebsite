@@ -168,17 +168,17 @@ document.addEventListener('DOMContentLoaded', function () {
         const savedData = JSON.parse(localStorage.getItem('savedData')) || [];
         savedData.forEach(function (data, index) {
             const li = document.createElement('li');
-            li.innerHTML = `Name: ${data.name}<br>Email: ${data.emailAddress}<br>Suggestion: ${data.message}<br>`;
+            li.innerHTML = `Nazwa: ${data.name}<br>Email: ${data.emailAddress}<br>Opinia: ${data.message}<br>`;
 
             const editButton = document.createElement('button');
-            editButton.textContent = 'Edit';
+            editButton.textContent = 'Edytuj';
             editButton.addEventListener('click', function () {
                 editReview(index);
             });
             li.appendChild(editButton);
 
             const deleteButton = document.createElement('button');
-            deleteButton.textContent = 'Delete';
+            deleteButton.textContent = 'Usuń';
             deleteButton.addEventListener('click', function () {
                 deleteReview(index);
             });
@@ -191,11 +191,11 @@ document.addEventListener('DOMContentLoaded', function () {
     function editReview(index) {
         const savedData = JSON.parse(localStorage.getItem('savedData')) || [];
         const data = savedData[index];
-        const newName = prompt('Enter new name', data.name);
+        const newName = prompt('Wpisz nową nazwę', data.name);
         if (newName === null) return;
-        const newEmail = prompt('Enter new email', data.emailAddress);
+        const newEmail = prompt('Wpisz nowy adres email', data.emailAddress);
         if (newEmail === null) return;
-        const newMessage = prompt('Enter new suggestion', data.message);
+        const newMessage = prompt('Wpisz nową opinię', data.message);
         if (newMessage === null) return;
 
         savedData[index] = {
