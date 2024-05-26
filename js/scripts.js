@@ -78,3 +78,54 @@ function fadeIn(el, display) {
         }
     })();
 }
+
+// // map API block
+// import {Loader} from '@googlemaps/js-api-loader';
+//
+// const apiOptions = {
+//     apiKey: "AIzaSyADKHUBGqgYdn8FQ_T9Ku79tQgmACXMbrM"
+// }
+//
+// const loader = new Loader(apiOptions);
+//
+// loader.load().then(() => {
+//     console.log('Maps JS API Loaded');
+// });
+//
+// function displayMap() {
+//     const mapOptions = {
+//         center: { lat: -33.860664, lng: 151.208138 },
+//         zoom: 14
+//     };
+//     const mapDiv = document.getElementById('map');
+//     const map = new google.maps.Map(mapDiv, mapOptions);
+//     return map;
+// }
+
+// Initialize and add the map
+let map;
+
+async function initMap() {
+    // The location of Uluru
+    const position = { lat: -25.344, lng: 131.031 };
+    // Request needed libraries.
+    //@ts-ignore
+    const { Map } = await google.maps.importLibrary("maps");
+    const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+
+    // The map, centered at Uluru
+    map = new Map(document.getElementById("map"), {
+        zoom: 4,
+        center: position,
+        mapId: "DEMO_MAP_ID",
+    });
+
+    // The marker, positioned at Uluru
+    const marker = new AdvancedMarkerElement({
+        map: map,
+        position: position,
+        title: "Uluru",
+    });
+}
+
+initMap();

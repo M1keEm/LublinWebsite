@@ -1,0 +1,17 @@
+{
+  "name": "lublinwebsite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/M1keEm/LublinWebsite.git"
+  },
+  "private": true,
+  "dependencies": {
+    "@googlemaps/js-api-loader": "^1.16.6"
+  }
+}
