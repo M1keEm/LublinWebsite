@@ -83,15 +83,19 @@ function fadeIn(el, display) {
 let map;
 
 async function initMap() {
-    const {Map} = await google.maps.importLibrary("maps");
-    map = new Map(document.getElementById("map"), {
-        center: {lat: -34.397, lng: 150.644},
-        zoom: 8,
+    // Request needed libraries.
+    const { Map } = await google.maps.importLibrary("maps");
+    const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+    const map = new Map(document.getElementById("map"), {
+        center: { lat: 51.248190, lng: 22.567414 },
+        zoom: 14,
+        mapId: "4504f8b37365c3d0",
     });
-    // const marker = new AdvancedMarkerElement({
-    //     map,
-    //     position: {lat: 37.4239163, lng: -122.0947209},
-    // });
+    const marker = new AdvancedMarkerElement({
+        map,
+        position: { lat: 51.248190, lng: 22.567414},
+    });
+
 }
 
 initMap();
