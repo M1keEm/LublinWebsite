@@ -11112,3 +11112,39 @@ footer.footer .social-link:hover {
   font-size: 2.25rem;
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
 }
+
+
+/* Styl dla przycisku Edytuj */
+.edit-button {
+  background-color: #4CAF50; /* Zielone tło */
+  color: white; /* Biały tekst */
+  border: none; /* Brak obramowania */
+  /*padding: 10px 20px; !* Wewnętrzne odstępy *!*/
+  text-align: center; /* Wyrównanie tekstu do środka */
+  text-decoration: none; /* Brak podkreślenia tekstu */
+  /*display: inline-block; !* Blokowy wyświetlacz *!*/
+  font-size: 16px; /* Rozmiar czcionki */
+  margin: 4px 2px; /* Marginesy */
+  cursor: pointer; /* Wskaźnik kursora */
+  border-radius: 8px; /* Zaokrąglone rogi */
+}
+
+.edit-button:hover{
+  background-color: #0f7100; /* Zielone tło */
+  color: white;
+}
+
+/* Styl dla przycisku Usuń */
+.delete-button {
+  background-color: #f44336; /* Czerwone tło */
+  color: white; /* Biały tekst */
+  border: none; /* Brak obramowania */
+  /*padding: 10px 20px; !* Wewnętrzne odstępy *!*/
+  text-align: center; /* Wyrównanie tekstu do środka */
+  text-decoration: none; /* Brak podkreślenia tekstu */
+  /*display: inline-block; !* Blokowy wyświetlacz *!*/
+  font-size: 16px; /* Rozmiar czcionki */
+  margin: 4px 4px; /* Marginesy */
+  cursor: pointer; /* Wskaźnik kursora */
+  border-radius: 8px; /* Zaokrąglone rogi */
+}

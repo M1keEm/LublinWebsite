@@ -172,6 +172,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             const editButton = document.createElement('button');
             editButton.textContent = 'Edytuj';
+            editButton.className = "btn btn-secondary btn-sm edit-button";
             editButton.addEventListener('click', function () {
                 editReview(index);
             });
@@ -179,6 +180,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             const deleteButton = document.createElement('button');
             deleteButton.textContent = 'Usuń';
+            deleteButton.className = "btn btn-danger btn-sm delete-button";
             deleteButton.addEventListener('click', function () {
                 deleteReview(index);
             });
