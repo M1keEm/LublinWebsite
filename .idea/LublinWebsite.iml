@@ -12,5 +12,8 @@
     <orderEntry type="library" name="bootstrap" level="application" />
     <orderEntry type="library" name="sb-forms-latest" level="application" />
     <orderEntry type="library" name="simple-line-icons" level="application" />
+    <orderEntry type="library" name="lightbox2" level="application" />
+    <orderEntry type="library" name="slick-carousel" level="application" />
+    <orderEntry type="library" name="jquery-3.6.0" level="application" />
   </component>
 </module>

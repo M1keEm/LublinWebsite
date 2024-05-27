@@ -353,7 +353,7 @@ button,
 select,
 optgroup,
 textarea {
-  margin: 0;
+  /*margin: 0;*/
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
@@ -11147,4 +11147,89 @@ footer.footer .social-link:hover {
   margin: 4px 4px; /* Marginesy */
   cursor: pointer; /* Wskaźnik kursora */
   border-radius: 8px; /* Zaokrąglone rogi */
+}
+
+.slider{
+  -webkit-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+  -moz-box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+  box-shadow: 8px 8px 24px 0px rgba(66, 68, 90, 1);
+}
+.slick-dots li.slick-active button:before {
+  color: #ffffff;
+}
+.slick-dots li button:before {
+  color: #ffffff;
+}
+
+.slider {
+  position: relative;
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+
+}
+.slider img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+.slick-prev, .slick-next {
+  width: 50px;
+  height: 50px;
+  z-index: 1;
+  opacity: 0.5;
+}
+.slick-prev:hover, .slick-next:hover {
+  opacity: 1;
+}
+.slick-prev {
+  left: 10px;
+  z-index: 2;
+}
+.slick-next {
+  right: 10px;
+  z-index: 2;
+}
+.slick-dots {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  display: flex !important;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.slick-dots li {
+  margin: 0 3px;
+}
+.slick-dots button {
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  width: 10px;
+  height: 10px;
+  padding: 5px;
+  cursor: pointer;
+  color: transparent;
+  border: 0;
+  outline: none;
+  background: transparent;
+}
+.slick-dots button:before {
+  font-size: 12px;
+  line-height: 12px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  content: '•';
+  text-align: center;
+  opacity: 0.25;
+  color: #ffffff;
+}
+.slick-dots .slick-active button:before {
+  opacity: 0.75;
+  color: #ffffff;
 }
